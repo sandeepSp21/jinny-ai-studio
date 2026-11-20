@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17152d"><title>Jinny AI Studio</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="logo">✦</span><div><b>Jinny AI Studio</b><small>AI Video Creator</small></div></div><span class="pill">BETA</span></header>
+<main>
+<section class="hero"><p class="eyebrow">CREATE • IMAGINE • ANIMATE</p><h1>Your story.<br><em>Your video.</em></h1><p class="muted">Build scene-by-scene video plans on your phone. Connect a video-generation service when you have an API endpoint.</p></section>
+<section class="panel">
+<h2>1. Create a video</h2>
+<label for="prompt">Describe your video</label>
+<textarea id="prompt" rows="5">A little Indian boy plays football at Puri beach. The ball rolls into the sea. He prays to Lord Jagannath, a divine golden light appears from the temple, and the football returns to shore. He folds his hands and says, “Thank you, Mahaprabhu. Jai Jagannath!”</textarea>
+<div class="grid">
+<div><label for="style">Visual style</label><select id="style"><option>3D Indian cartoon</option><option>2D cartoon</option><option>Cinematic realistic</option><option>Anime</option></select></div>
+<div><label for="ratio">Video format</label><select id="ratio"><option value="9:16">Vertical 9:16 (Shorts)</option><option value="16:9">Landscape 16:9</option></select></div>
+<div><label for="duration">Clip length</label><select id="duration"><option>5 seconds</option><option>10 seconds</option></select></div>
+<div><label for="scenes">Number of scenes</label><select id="scenes"><option>5</option><option selected>10</option><option>15</option></select></div>
+</div>
+<div class="actions"><button id="makePlan" class="primary">Create scene prompts</button><button id="saveProject" class="secondary">Save project</button></div>
+<p id="status" class="status" aria-live="polite">Your project stays in this browser on this device.</p>
+</section>
+<section class="panel">
+<div class="sectionhead"><h2>2. Scene prompts</h2><button id="copyAll" class="textbtn">Copy all</button></div>
+<div id="scenesOut" class="scenes"><div class="empty">Your scene-by-scene prompts will appear here.</div></div>
+</section>
+<section class="panel">
+<h2>3. Generate video</h2>
+<p class="muted">This starter site prepares prompts and project files. It does not pretend to generate video by itself. To generate real AI video, connect a provider or your own GPU server.</p>
+<label for="endpoint">Your video API endpoint (optional)</label><input id="endpoint" type="url" placeholder="https://your-server.example/generate">
+<label for="apiKey">API key (optional; avoid saving secrets on a public website)</label><input id="apiKey" type="password" placeholder="Paste a key only for private testing">
+<div class="actions"><button id="sendApi" class="primary">Send prompt to my API</button><button id="downloadPrompts" class="secondary">Download prompts</button></div>
+<p id="apiStatus" class="status" aria-live="polite">No video-generation API connected.</p>
+</section>
+<section class="panel tips"><h2>Free-first workflow</h2><ol><li>Create unlimited projects and scene prompts here.</li><li>Use a free-tier image/video service when it offers credits; limits can change.</li><li>For truly no per-video cloud fee, run an open-source video model on a capable computer with a GPU. A phone alone is not suitable for most video models.</li></ol></section>
+</main>
+<footer>Made for mobile • Jinny AI Studio</footer>
+<script src="app.js"></script>
+</body></html>

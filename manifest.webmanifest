@@ -1,0 +1,9 @@
+{
+  "name": "Jinny AI Studio",
+  "short_name": "Jinny Studio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0e0d18",
+  "theme_color": "#17152d",
+  "icons": []
+}
